@@ -37,8 +37,8 @@ export const Navigation = () => {
                 <Route key={`route: ${route.path}`} path={route.path} element={<route.Component />} />
               ))
             }
-
-            <Route path='/*' element={<Navigate to={routes[0].to} replace />} />
+            
+            <Route path="*" element={ <Navigate to={routes[0].to} replace /> } />
           </Routes>
         </div>
       </Router>

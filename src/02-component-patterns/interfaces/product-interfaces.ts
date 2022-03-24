@@ -3,13 +3,19 @@ import { Props as ProductButtonsProps } from "../components/ProductButtons";
 import { Props as ProductImageProps } from "../components/ProductImage";
 import { Props as ProductTitleProps } from "../components/ProductTitle";
 
+export interface InitialValues {
+    count?: number;
+    maxCount?: number;
+}
+
 export interface ProductCardProps {
     product: Product;
     children?: ReactElement | ReactElement[];
     className?: string;
     style?: CSSProperties;
     onChange?: (args: onChangeArgs) => void;
-    value?: number
+    value?: number;
+    initialValues?: InitialValues;
 }
 
 export interface Product {
